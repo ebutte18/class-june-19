@@ -1,5 +1,6 @@
 ---
 title: "Economic Connectedness"
+author: "Eric Butte"
 format: html
 ---
 
