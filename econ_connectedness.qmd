@@ -5,5 +5,22 @@ format: html
 ---
 
 ```{r}
+#| message: false
+#| echo: false
+#| warning: false
 library(tidyverse)
+library(primer.data)
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+suppressWarnings(
+    ggplot(connectedness, aes(x=population, y=connectedness)) +
+        geom_point() +
+        scale_x_log10(labels = scales::comma) +
+        geom_smooth(method = lm, color = "blue") +
+        labs(title = "US County Populations versus Economic Connectedness", subtitle = "Population Size does not Matter to EC", x = "Population", y = "Economic Connectedness", caption = "Opportunity Insights")
+)
 ```
